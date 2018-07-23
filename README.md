@@ -1,2 +1,1 @@
-# kinn-labs-site
-Kinn Labs Site
+# Kinn Labs Site
