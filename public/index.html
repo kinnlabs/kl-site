@@ -16,6 +16,24 @@
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="stylesheet" href="assets/styles/responsive.css">
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!-- Event snippet for Odeslání emailu conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-779540721/9DXGCKy-1I8BEPGx2_MC',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar">
 
@@ -298,7 +316,7 @@
             <input type="email" name="_replyto" placeholder="Vaše emailová adresa" id="mc-email" class="wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s" >
 
             <!-- Send Button -->
-            <input type="submit" name="subscribe" value="Odeslat" class="btn btn-light btn-large wow fadeInUp mc-send-btn" data-wow-delay=".1s" data-wow-duration="1s">
+            <input onclick="gtag_report_conversion()" type="submit" name="subscribe" value="Odeslat" class="btn btn-light btn-large wow fadeInUp mc-send-btn" data-wow-delay=".1s" data-wow-duration="1s">
 
             <!-- Button State -->
             <!-- <label for="mc-email" class="mc-info"></label> -->
