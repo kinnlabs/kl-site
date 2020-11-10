@@ -340,7 +340,7 @@
           <div class="row">
 
             <div class="col-md-6">
-              <small>&copy; 2018 Kinn Labs</small>
+              <small>&copy; <span id="year"></span> Kinn Labs. All rights reserved.</small>
             </div>
 
             <div class="col-md-6">
@@ -386,6 +386,11 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-129362555-1');
+    </script>
+
+    <!-- Year -->
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
   </body>
 </html>
